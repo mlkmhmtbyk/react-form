@@ -78,3 +78,9 @@ Used libraries:
 Material UI
 React-router-dom
 react-hook-form
+
+running commands:
+git clone
+cd form-ui
+npm install
+npm run dev / npm run build
