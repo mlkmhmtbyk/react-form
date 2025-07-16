@@ -1,5 +1,6 @@
 # React + TypeScript + Vite
 
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
@@ -67,3 +68,13 @@ export default tseslint.config([
   },
 ])
 ```
+
+Created with Vite, React - TypeScript
+
+Deployed with netlify
+https://react-form-melik.netlify.app/
+
+Used libraries: 
+Material UI
+React-router-dom
+react-hook-form
