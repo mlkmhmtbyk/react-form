@@ -1,4 +1,3 @@
-// src/pages/UserCard.tsx
 import { Card, CardContent, Typography } from '@mui/material';
 
 export const UserCard = () => {

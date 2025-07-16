@@ -1,4 +1,3 @@
-// src/components/FormField.tsx
 import { TextField } from '@mui/material';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -6,7 +5,7 @@ type Props = {
   name: string;
   label: string;
   type?: string;
-  rules?: any; // validation kuralları
+  rules?: any;
 };
 
 export const FormField = ({ name, label, type = 'text', rules }: Props) => {

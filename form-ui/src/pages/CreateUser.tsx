@@ -1,8 +1,8 @@
-// src/pages/CreateUser.tsx
-import { Button, Checkbox, FormControlLabel, Typography } from '@mui/material';
+import { Checkbox, FormControlLabel, Typography } from '@mui/material';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { FormField } from '../components/FormFiled';
+import { FormButton } from '../components/FormButton';
 
 type FormData = {
   fullname: string;
@@ -36,14 +36,12 @@ export const CreateUser = () => {
           Create User
         </Typography>
 
-        {/* Fullname zorunlu */}
         <FormField
           name="fullname"
           label="Fullname *"
           rules={{ required: 'Fullname is required' }}
         />
 
-        {/* Email regex validasyonu */}
         <FormField
           name="email"
           label="Email *"
@@ -51,13 +49,12 @@ export const CreateUser = () => {
           rules={{
             required: 'Email is required',
             pattern: {
-              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, // Basit email regex
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               message: 'Invalid email format',
             },
           }}
         />
 
-        {/* Password alfanümerik regex */}
         <FormField
           name="password"
           label="Password *"
@@ -65,7 +62,7 @@ export const CreateUser = () => {
           rules={{
             required: 'Password is required',
             pattern: {
-              value: /^[a-zA-Z0-9]+$/, // Sadece alfanümerik karakterler
+              value: /^[a-zA-Z0-9]+$/,
               message: 'Password must be alphanumeric',
             },
           }}
@@ -76,9 +73,7 @@ export const CreateUser = () => {
           label="Remember Me"
         />
 
-        <Button variant="contained" color="primary" type="submit" fullWidth>
-          Submit
-        </Button>
+        <FormButton label="Submit" type="submit" />
       </form>
     </FormProvider>
   );
